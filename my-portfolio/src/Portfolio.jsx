@@ -59,10 +59,10 @@ const Linkedin = ({ size = 18, ...props }) => (
 
 const NAME = "Sudhanshu Anand";
 const ROLES = [
-  "Full-Stack Developer",
-  "React Specialist",
+  "MERN stack Developer",
+  "Wordpress Web Desinger",
   "3D Web Enthusiast",
-  "Open Source Contributor",
+  "UX/UI Designer",
 ];
 
 const NAV_LINKS = [
@@ -75,10 +75,10 @@ const NAV_LINKS = [
 ];
 
 const STATS = [
-  { label: "Years Experience", value: "5+" },
-  { label: "Projects Shipped", value: "40+" },
+  { label: "Years Experience", value: "2+" },
+  { label: "Projects Shipped", value: "30+" },
   { label: "Companies", value: "3" },
-  { label: "Coffee / Day", value: "3" },
+  { label: "Coffee / Day", value: "2" },
 ];
 
 const SKILL_GROUPS = [
