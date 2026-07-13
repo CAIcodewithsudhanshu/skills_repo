@@ -77,7 +77,7 @@ const NAV_LINKS = [
 const STATS = [
   { label: "Years Experience", value: "2+" },
   { label: "Projects Shipped", value: "30+" },
-  { label: "Companies", value: "3" },
+  { label: "Companies", value: "2" },
   { label: "Coffee / Day", value: "2" },
 ];
 
@@ -85,29 +85,55 @@ const SKILL_GROUPS = [
   {
     icon: Code2,
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Three.js"],
+    items: [
+      "React.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Three.js",
+    ],
   },
   {
     icon: Wrench,
     title: "Backend",
-    items: ["Node.js", "Express", "Python", "GraphQL", "REST APIs"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Authentication",
+      "Python",
+    ],
   },
   {
     icon: Database,
-    title: "Data",
-    items: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "Prisma"],
+    title: "Database",
+    items: [
+      "MongoDB",
+      "MySQL",
+    ],
   },
   {
     icon: Layers,
-    title: "Tooling",
-    items: ["Docker", "AWS", "CI / CD", "Git", "Figma"],
+    title: "Tools & Cloud",
+    items: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Docker",
+      "AWS EC2",
+      "AWS S3",
+      "WordPress",
+      "Photoshop",
+    ],
   },
 ];
 
 const PROJECTS = [
   {
     code: "01",
-    name: "NEXUS",
+    name: "",
     desc: "Real-time collaboration platform with live cursors, shared canvases and conflict-free sync across thousands of concurrent sessions.",
     tags: ["React", "Node.js", "WebSocket", "PostgreSQL"],
     glow: "cyan",
@@ -721,7 +747,7 @@ export default function Portfolio() {
               &lt;Codewithsudhanshu/&gt;
             </button>
 
-            <nav className=" md:flex items-center gap-8">
+            <nav className=" md:flex items-center gap-8 max-md:hidden">
               {NAV_LINKS.map((l) => (
                 <button
                   key={l.id}
@@ -787,10 +813,9 @@ export default function Portfolio() {
             {typedText}
             <span className="blink-cursor h-5 align-middle" />
           </div>
-          <p className="max-w-xl text-muted text-sm sm:text-base leading-relaxed mb-10">
-            I build fast, immersive interfaces where clean engineering meets
-            motion and dimension — from pixel-tight UI to real-time 3D on
-            the web.
+          <p className="max-w-xl text-muted text-sm sm:text-base leading-relaxed mb-10 color">
+            I build scalable web applications, enterprise ERP solutions, real-time analytics dashboards, immersive 3D interfaces, 
+            and secure authentication systems using React and Tailwind CSS—delivering production-ready solutions for businesses and freelance clients.
           </p>
           <div className="flex flex-wrap gap-4">
             <button
@@ -850,7 +875,7 @@ export default function Portfolio() {
           <div className="reveal">
             <p className="font-mono text-xs text-green mb-3">// about</p>
             <h2 className="font-display text-3xl sm:text-4xl mb-8">
-              System <span className="text-cyan">Overview</span>
+              Developer <span className="text-cyan">Overview</span>
             </h2>
 
             <div className="bg-surface border border-hud rounded-xl overflow-hidden">
@@ -865,14 +890,11 @@ export default function Portfolio() {
               <div className="p-5 sm:p-6 font-mono text-sm leading-relaxed text-muted">
                 <p className="mb-3">
                   <span className="text-cyan">&gt;</span> Full-stack developer
-                  with 5+ years turning ambitious ideas into performant,
+                  with 2+ years turning ambitious ideas into performant,
                   production-grade products.
                 </p>
                 <p className="mb-3">
-                  <span className="text-cyan">&gt;</span> Focused on the
-                  intersection of clean architecture and expressive
-                  interfaces — motion, depth and detail that feel earned,
-                  not decorative.
+                  <span className="text-cyan">&gt;</span> Frontend Developer turning real-world business requirements into performant, production-ready web applications.
                 </p>
                 <p>
                   <span className="text-cyan">&gt;</span> Currently exploring
