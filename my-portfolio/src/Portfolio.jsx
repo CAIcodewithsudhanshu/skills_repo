@@ -14,6 +14,7 @@ import {
   Terminal,
   Send,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 /* lucide-react dropped brand/logo icons in newer versions, so these
    two are simple hand-rolled replacements. */
@@ -747,12 +748,43 @@ export default function Portfolio() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // -----------------------------------
+  // EMAIL INTEGRATION
+  // -----------------------------------
+  
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setSent(true);
+  //   setTimeout(() => setSent(false), 3500);
+  //   setForm({ name: "", email: "", message: "" });
+  // };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.send(
+      "service_6tfhhdi",
+      "template_3szlj6d",
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      },
+      "_s3fyHRoH0jE0WsTo"
+    );
+
     setSent(true);
-    setTimeout(() => setSent(false), 3500);
-    setForm({ name: "", email: "", message: "" });
-  };
+
+    setForm({
+      name: "",
+      email: "",
+      message: "",
+    });
+  } catch (error) {
+    console.log(error);
+    alert("Something went wrong");
+  }
+};
 
 
   return (
