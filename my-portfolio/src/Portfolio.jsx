@@ -53,6 +53,28 @@ const Linkedin = ({ size = 18, ...props }) => (
   </svg>
 );
 
+
+  const WhatsApp = ({ size = 18, ...props }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.7"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M12 3a9 9 0 0 0-7.75 13.55L3 21l4.6-1.2A9 9 0 1 0 12 3Z" />
+    <path
+      d="M8.3 8.7c.15-.5.4-.5.6-.5h.45c.15 0 .35 0 .5.4.2.5.65 1.7.7 1.8.05.1.1.25 0 .4-.1.15-.15.25-.3.4-.15.15-.3.3-.15.55.4.7.9 1.35 1.55 1.9.7.6 1.3.9 1.55 1.05.25.15.4.1.55-.05.15-.15.6-.7.75-.95.15-.25.3-.2.5-.1.2.05 1.25.6 1.45.7.2.1.35.15.4.25.05.1.05.6-.15 1.15-.2.55-1.15 1.05-1.6 1.1-.4.05-.9.1-3.3-.9-2.4-1-3.7-3.15-3.85-3.4-.15-.25-1.1-1.6-1.1-3s.75-2.1.95-2.35Z"
+      fill="currentColor"
+      stroke="none"
+    />
+  </svg>
+);
+
 /* ------------------------------------------------------------------ */
 /*  DATA — edit this block to make the site yours                     */
 /* ------------------------------------------------------------------ */
@@ -731,6 +753,7 @@ export default function Portfolio() {
     setTimeout(() => setSent(false), 3500);
     setForm({ name: "", email: "", message: "" });
   };
+
 
   return (
     <div className="portfolio-root min-h-screen">
