@@ -81,7 +81,7 @@ const Linkedin = ({ size = 18, ...props }) => (
 /* ------------------------------------------------------------------ */
 
 const NAME = "Sudhanshu Anand";
-const FOOTER_NAME = "CODEWITHSUDHANSHU";
+const FOOTER_NAME = "CODE_WITH_SUDHANSHU";
 const ROLES = [
   "MERN stack Developer",
   "Wordpress Web Desinger",
@@ -1214,7 +1214,8 @@ export default function Portfolio() {
           <p className="font-mono text-xs text-muted">
             Built with <span className="text-cyan">React</span> ·{" "}
             <span className="text-violet">Three.js</span> ·{" "}
-            <span className="text-green">Tailwind</span>
+            <span className="text-green">Tailwind CSS</span> ·{" "}
+            <span className="text-[#ff0000]">Email JS</span>
           </p>
         </div>
       </footer>
