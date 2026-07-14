@@ -159,30 +159,36 @@ const PROJECTS = [
     code: "01",
     name: "WORDPRESS WEBSITE",
     desc: "Designed and developed responsive, SEO-friendly WordPress websites with custom themes, plugin integration, and optimized performance for business and client requirements.",
-    tags: ["WordPress", "PHP", "Elementor", "CSS"],
+    tags: ["WordPress", "PHP", "Elementor", "CSS", "SEO", "MAILCHIP", "CHATBOT", "SOCIAL MEDIA INTEGRATION"],
     glow: "cyan",
   },
   {
     code: "02",
     name: "PHILIPPINES TAT DASHBOARD",
     desc: "Built a real-time analytics dashboard to monitor TAT metrics, visualize operational data, and generate business insights with interactive charts and responsive UI.",
-    tags: ["React", "JavaScript", "REST API", "Charts"],
+    tags: ["ReactJS", "JavaScript", "REST API", "Charts", "TAILWIND CSS", "MONGO DB", "MYSQL"],
     glow: "violet",
   },
   {
     code: "03",
     name: "MOTOR INSURANCE AI-INTEGRATED REAL-TIME DASHBOARD",
     desc: "Developed an AI-integrated insurance dashboard featuring secure authentication, real-time data visualization, policy management, and responsive enterprise-grade interfaces.",
-    tags: ["React", "Node.js", "MongoDB", "JWT"],
+    tags: ["ReactJS", "Node.js", "MongoDB", "MY SQL", "AWS S3", "API INTEGRATION"],
     glow: "green",
   },
   {
     code: "04",
     name: "THAI & FILIPINO DELIVERY SYSTEM",
     desc: "Developed and maintained a delivery management system for Thailand and the Philippines, enabling real-time order tracking, operational workflows, and efficient delivery monitoring.",
-    tags: ["React", "Node.js", "MongoDB", "REST API"],
+    tags: ["Python", "Django", "MongoDB", "REST API", "MY SQL", "EXCEL"],
     glow: "cyan",
   },
+];
+
+const LIVE_PROJECTS = [
+  { name: "Waymark Tours", url: "https://waymarktours.com/", desc: "Tour and Travel booking Website" }, 
+  { name: "C.A. Portfolio", url: "https://procaindia.in/", desc: "A Chartered Accountant Portfolio" },
+  { name: "Limeberry", url: "https://www.limeberry.in/", desc: "E-commerce Website" },
 ];
 
 const EXPERIENCE = [
@@ -210,8 +216,10 @@ const SOCIALS = [
   { icon: Github, href: "https://github.com/CAIcodewithsudhanshu", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/sudhanshu-anand-ab26a6232/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:anandsudhanshu008@gmail.com", label: "Email" },
-  { icon: WhatsApp, href: "https://wa.me/91XXXXXXXXXX", label: "WhatsApp" },
+  { icon: WhatsApp, href: "https://wa.me/+919266064405", label: "WhatsApp" },
 ];
+
+
 
 /* ------------------------------------------------------------------ */
 /*  Global styles                                                     */
@@ -1045,6 +1053,44 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+
+      {/* LIVE PROJECTS */}
+        <section id="live" className="py-24 sm:py-32 px-5 sm:px-8 bg-surface-40">
+  <div className="mx-auto max-w-6xl">
+    <p className="font-mono text-xs text-green mb-3 reveal">
+      // live deployments
+    </p>
+    <h2 className="font-display text-3xl sm:text-4xl mb-14 reveal">
+      Live <span className="text-cyan">Projects</span>
+    </h2>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {LIVE_PROJECTS.map((p) => (
+        <a
+          key={p.name}
+          href={p.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card reveal rounded-xl p-6 hover:glow-cyan flex flex-col gap-3 group"
+        >
+          <div className="flex items-center justify-between">
+            <span className="w-2 h-2 rounded-full bg-green inline-block" />
+            <ExternalLink
+              size={16}
+              className="text-muted group-hover:text-cyan transition-colors"
+            />
+          </div>
+          <h3 className="font-display text-lg text-cyan">{p.name}</h3>
+          <p className="text-muted text-sm leading-relaxed">{p.desc}</p>
+          <span className="font-mono text-xs text-violet break-all mt-auto">
+            {p.url}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* EXPERIENCE TIMELINE */}
       <section
