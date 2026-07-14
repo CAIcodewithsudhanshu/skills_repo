@@ -58,6 +58,7 @@ const Linkedin = ({ size = 18, ...props }) => (
 /* ------------------------------------------------------------------ */
 
 const NAME = "Sudhanshu Anand";
+const FOOTER_NAME = "CODEWITHSUDHANSHU";
 const ROLES = [
   "MERN stack Developer",
   "Wordpress Web Desinger",
@@ -164,7 +165,7 @@ const PROJECTS = [
 const EXPERIENCE = [
   {
     year: "2025 — Present",
-    role: "MERN Stac Developer",
+    role: "MERN Stack Developer",
     org: "Constem-AI Pvt Lmt Noida-52 IND",
     desc: "Leading the platform team rebuilding the core product on React and TypeScript, cutting load times by 60%.",
   },
@@ -183,9 +184,10 @@ const EXPERIENCE = [
 ];
 
 const SOCIALS = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: Github, href: "https://github.com/CAIcodewithsudhanshu", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/sudhanshu-anand-ab26a6232/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:anandsudhanshu008@gmail.com", label: "Email" },
+  { icon: WhatsApp, href: "https://wa.me/91XXXXXXXXXX", label: "WhatsApp" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -851,14 +853,23 @@ export default function Portfolio() {
               {[
                 "REACT",
                 "NEXT.JS",
-                "TYPESCRIPT",
                 "THREE.JS",
                 "NODE.JS",
-                "GRAPHQL",
-                "POSTGRESQL",
-                "DOCKER",
-                "AWS",
+                "WORDPRESS",
+                "CORELDRAW",
+                "ADOBE PHOTOSHOP",
+                "CANVA",
+                "JAVASCRIPT",
+                "AWS S3",
                 "TAILWIND CSS",
+                "MY SQL",
+                "MONGO DB",
+                "ELEMENTOR",
+                "API INTEGRATION",
+                "MAILCHIP INTEGRATION",
+                "POSTMAN",
+                "HTML/CSS",
+                "BOOTSTRAP",
               ].map((tech) => (
                 <span key={tech + i} className="tracking-widest">
                   {tech} <span className="text-cyan">•</span>
@@ -1037,7 +1048,7 @@ export default function Portfolio() {
               <div className="flex items-center gap-2 px-4 py-3 border-b border-hud">
                 <Terminal size={14} className="text-cyan" />
                 <span className="font-mono text-xs text-muted">
-                  send_message.sh
+                  Let's Discuss Your Project
                 </span>
               </div>
               <form onSubmit={handleSubmit} className="p-5 sm:p-6 space-y-4">
@@ -1051,7 +1062,7 @@ export default function Portfolio() {
                     onChange={(e) =>
                       setForm({ ...form, name: e.target.value })
                     }
-                    placeholder="Jane Doe"
+                    placeholder="Your name"
                     className="w-full rounded-lg px-4 py-2.5 text-sm"
                   />
                 </div>
@@ -1066,7 +1077,7 @@ export default function Portfolio() {
                     onChange={(e) =>
                       setForm({ ...form, email: e.target.value })
                     }
-                    placeholder="jane@example.com"
+                    placeholder="your@mail.com"
                     className="w-full rounded-lg px-4 py-2.5 text-sm"
                   />
                 </div>
@@ -1094,7 +1105,7 @@ export default function Portfolio() {
                 </button>
                 {sent && (
                   <p className="font-mono text-xs text-green">
-                    &gt; message queued — response ETA 24h
+                    &gt; message queued — response ETA 24hrs
                   </p>
                 )}
               </form>
@@ -1105,7 +1116,7 @@ export default function Portfolio() {
                 <p className="font-mono text-xs text-muted mb-2">
                   direct line
                 </p>
-                <p className="text-sm break-all">alex.rivera@email.dev</p>
+                <p className="text-sm break-all">codewithsudhanshu943@gmail.com</p>
               </div>
               <div className="card rounded-xl p-6">
                 <p className="font-mono text-xs text-muted mb-4">
@@ -1143,7 +1154,7 @@ export default function Portfolio() {
       <footer className="border-t border-hud px-5 sm:px-8 py-8">
         <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-mono text-xs text-muted">
-            © {new Date().getFullYear()} {NAME}. All systems operational.
+            © {new Date().getFullYear()} {FOOTER_NAME}. All systems operational.
           </p>
           <p className="font-mono text-xs text-muted">
             Built with <span className="text-cyan">React</span> ·{" "}
